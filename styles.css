@@ -1,4 +1,3 @@
-/* styles.css */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -17,7 +16,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -37,5 +36,41 @@ body {
 button {
   cursor: pointer;
   padding: 5px 10px;
+  margin-top: 10px;
+}
+
+/* Edit Form Styling */
+#edit-form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+#edit-form-container.show {
+  display: block;
+}
+
+#edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#edit-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#image-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   margin-top: 10px;
 }
